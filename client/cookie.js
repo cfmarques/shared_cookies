@@ -20,7 +20,6 @@ var CookieHandler = (function() {
   }
 
   var onRequestComplete = function() {
-      debugger;
     var COMPLETE = 4
     var OK = 200;
 
@@ -35,7 +34,6 @@ var CookieHandler = (function() {
     httpRequest.onreadystatechange = onRequestComplete;
     httpRequest.open('POST', url, true);
     httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-    httpRequest.setRequestHeader('Access-Control-Allow-Origin', '*');
     httpRequest.withCredentials = true;
     httpRequest.send();
   };
